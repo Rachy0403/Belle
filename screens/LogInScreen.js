@@ -4,6 +4,8 @@ import {styles} from './LoginScreenStyle'
 import {CustomButton} from '../components/CustomButton'
 import {InputBox} from '../components/InputBox'
 import * as Font from 'expo-font'
+import { ActivityIndicator } from "react-native";
+
 
 export default class LoginScreen extends Component {
 
@@ -20,6 +22,7 @@ export default class LoginScreen extends Component {
      async componentWillMount() {
         await Font.loadAsync({
             'quicksand': require('./../assets/fonts/Quicksand-Regular.ttf'),
+            'quicksand-bold': require('./../assets/fonts/Quicksand-Bold.ttf')
         })
         this.setState({ loading: false })
     }
@@ -51,6 +54,9 @@ export default class LoginScreen extends Component {
     }
 
     render() {
+        if (this.state.loading) {
+            return <ActivityIndicator />;
+          }
         return (
             <View style = {{flex:1,width:'100%', alignItems:'center', fontFamily: 'galio'}}>
                <ImageBackground  style = {styles.libg} imageStyle= {{opacity:0.5}}>
@@ -75,7 +81,7 @@ export default class LoginScreen extends Component {
                 <CustomButton title = "ĐĂNG NHẬP" buttoncolor = "#84a59d" textcolor = 'white' buttonclick = {this._retrieveData}/>
                 </View>
                 </View>
-                <View style = {{height:30}}><Text style = {[styles.heading, {fontFamily: 'quicksand'}]}> Social Logins</Text></View>
+                <View style = {{height:30}}><Text style = {[styles.heading, {fontFamily: 'quicksand-bold'}]}> Social Logins</Text></View>
                 <View style = {{height:50,flexDirection:'row',justifyContent:'center'}}>
                 <Image source = {require('../components/images/LoginScreen/Facebook-button.png')} style = {[styles.moviebutton,{marginRight:30}]}></Image>
                 <Image source = {require('../components/images/LoginScreen/Facebook-button.png')} style = {styles.moviebutton}></Image>
