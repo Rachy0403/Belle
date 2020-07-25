@@ -11,7 +11,9 @@ import OnboardingScreen from '../screens/Onboarding';
 import ProfileScreen from '../screens/Profile';
 import ProScreen from '../screens/Pro';
 import SettingsScreen from '../screens/Settings';
+import LogInScreen from '../screens/LogInScreen';
 
+ 
 import CustomDrawerContent from './Menu';
 import { Icon, Header } from '../components';
 import { Images, materialTheme } from "../constants/";
@@ -242,6 +244,20 @@ function AppStack(props) {
       <Drawer.Screen
         name="Sign Up"
         component={ProScreen}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="md-person-add"
+              family="ionicon"
+              color={focused ? "white" : materialTheme.COLORS.MUTED}
+            />
+          )
+        }}
+      />
+      <Drawer.Screen
+        name="Log In"
+        component={LogInScreen}
         options={{
           drawerIcon: ({ focused }) => (
             <Icon

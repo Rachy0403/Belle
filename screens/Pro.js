@@ -8,6 +8,7 @@ import { Images, materialTheme } from '../constants/';
 import { HeaderHeight } from "../constants/utils";
 
 export default class Pro extends React.Component {
+  
   render() {
     const { navigation } = this.props;
 
@@ -54,8 +55,8 @@ export default class Pro extends React.Component {
                 shadowless
                 style={styles.button}
                 color={materialTheme.COLORS.BUTTON_COLOR}
-                onPress={() => navigation.navigate('Home')}>
-                GET PRO VERSION
+                onPress={() => navigation.navigate('Log In')}>
+                GET NEW VERSION
               </Button>
             </Block>
           </Block>
