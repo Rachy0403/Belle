@@ -12,6 +12,7 @@ import ProfileScreen from '../screens/Profile';
 import ProScreen from '../screens/Pro';
 import SettingsScreen from '../screens/Settings';
 import LogInScreen from '../screens/LogInScreen';
+import Option from '../screens/Option';
 
  
 import CustomDrawerContent from './Menu';
@@ -283,6 +284,7 @@ export default function OnboardingStack(props) {
           headerTransparent: true
         }}
       />
+	  <Stack.Screen name="Option" component={Option}/>
       <Stack.Screen name="App" component={AppStack} />
     </Stack.Navigator>
   );
