@@ -5,7 +5,6 @@ import { Block, Button, Text, theme } from 'galio-framework';
 const { height, width } = Dimensions.get('screen');
 
 import materialTheme from '../constants/Theme';
-import Images from '../constants/Images';
 
 export default class Onboarding extends React.Component {
 	render() {
@@ -17,24 +16,26 @@ export default class Onboarding extends React.Component {
 				<Block flex center>
 					<ImageBackground
 						source={require('../components/images/LoginScreen/universe.png')}
-						style={{ height: height, width: width, marginTop: '-55%', zIndex: 1 }}
+						style={{ height: height, width: width, zIndex: 1 }}
 					/>
 				</Block>
 				<Block flex space="between" style={styles.padded}>
 					<Block flex space="around" style={{ zIndex: 2 }}>
 						<Block>
 							<Block>
-								<Text color="white" size={60}>Belle</Text>
+								<Text color="#F28482" size={50}>Belle</Text>
 							</Block>
-							<Text size={16} color='rgba(255,255,255,0.6)'>
-								of girls
-              </Text>
-							<Text size={16} color='rgba(255,255,255,0.6)'>
-								for girls
-              </Text>
-							<Text size={16} color='rgba(255,255,255,0.6)'>
-								by girls
-              </Text>
+							<Block>
+								<Text size={16} color='#F6BD60'>
+									of girls
+								</Text>
+								<Text size={16} color='#F6BD60'>
+									for girls
+								</Text>
+								<Text size={16} color='#F6BD60'>
+									by girls
+								</Text>
+							</Block>
 						</Block>
 						<Block center>
 							<Button
@@ -42,7 +43,7 @@ export default class Onboarding extends React.Component {
 								style={styles.button}
 								color={materialTheme.COLORS.BUTTON_COLOR}
 								onPress={() => navigation.navigate('Option')}>
-								GET STARTED
+								KHÁM PHÁ NGAY
               </Button>
 						</Block>
 					</Block>
@@ -62,8 +63,9 @@ const styles = StyleSheet.create({
 		bottom: theme.SIZES.BASE,
 	},
 	button: {
-		width: width - theme.SIZES.BASE * 4,
+		width: width - theme.SIZES.BASE * 9,
 		height: theme.SIZES.BASE * 3,
+		borderRadius: 30,
 		shadowRadius: 0,
 		shadowOpacity: 0,
 	},
