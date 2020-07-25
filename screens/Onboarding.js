@@ -1,14 +1,36 @@
 import React from 'react';
 import { ImageBackground, StyleSheet, StatusBar, Dimensions, Platform } from 'react-native';
 import { Block, Button, Text, theme } from 'galio-framework';
+import * as Font from 'expo-font';
+import { ActivityIndicator } from "react-native";
 
 const { height, width } = Dimensions.get('screen');
 
 import materialTheme from '../constants/Theme';
 
 export default class Onboarding extends React.Component {
+
+	constructor () {
+        super()
+        this.state = {
+          loading: true
+        }
+	 }
+	 
+     async componentWillMount() {
+        await Font.loadAsync({
+            'quicksand': require('./../assets/fonts/Quicksand-Regular.ttf'),
+            'quicksand-bold': require('./../assets/fonts/Quicksand-Bold.ttf')
+        })
+        this.setState({ loading: false })
+    }
+
 	render() {
 		const { navigation } = this.props;
+
+		if (this.state.loading) {
+            return <ActivityIndicator />;
+          }
 
 		return (
 			<Block flex style={styles.container}>
@@ -23,16 +45,16 @@ export default class Onboarding extends React.Component {
 					<Block flex space="around" style={{ zIndex: 2 }}>
 						<Block>
 							<Block>
-								<Text color="#F28482" size={50}>Belle</Text>
+								<Text style={styles.font} color="#F28482" size={50}>Belle</Text>
 							</Block>
 							<Block>
-								<Text size={16} color='#F6BD60'>
+								<Text style={styles.font} size={16} color='#F6BD60'>
 									of girls
 								</Text>
-								<Text size={16} color='#F6BD60'>
+								<Text style={styles.font} size={16} color='#F6BD60'>
 									for girls
 								</Text>
-								<Text size={16} color='#F6BD60'>
+								<Text style={styles.font} size={16} color='#F6BD60'>
 									by girls
 								</Text>
 							</Block>
@@ -40,7 +62,7 @@ export default class Onboarding extends React.Component {
 						<Block center>
 							<Button
 								shadowless
-								style={styles.button}
+								style={styles.button, styles.font}
 								color={materialTheme.COLORS.BUTTON_COLOR}
 								onPress={() => navigation.navigate('Option')}>
 								KHÁM PHÁ NGAY
@@ -69,4 +91,7 @@ const styles = StyleSheet.create({
 		shadowRadius: 0,
 		shadowOpacity: 0,
 	},
+	font: {
+		fontFamily: 'quicksand-bold'
+	}
 });
