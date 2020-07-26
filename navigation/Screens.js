@@ -25,8 +25,8 @@ const Drawer = createDrawerNavigator();
 
 const profile = {
   avatar: Images.Profile,
-  name: "Rachel Brown",
-  type: "Seller",
+  name: "Thu Nguyen",
+  type: "Newbie",
   plan: "Pro",
   rating: 4.8
 };
@@ -99,11 +99,11 @@ function HomeStack(props) {
         options={{
           header: ({ navigation, scene }) => (
             <Header 
-              search
-              tabs
-              title="Home"
+              title="Belle"
               navigation={navigation}
               scene={scene}
+              transparent	
+
             />
           )
         }}
@@ -236,7 +236,6 @@ function AppStack(props) {
               size={16}
               name="ios-log-in"
               family="ionicon"
-              color={focused ? "white" : materialTheme.COLORS.MUTED}
             />
           )
         }}
@@ -250,7 +249,6 @@ function AppStack(props) {
               size={16}
               name="md-person-add"
               family="ionicon"
-              color={focused ? "white" : materialTheme.COLORS.MUTED}
             />
           )
         }}

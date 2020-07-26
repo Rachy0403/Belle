@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, ImageBackground,Image,TextInput,Button,TouchableHighlight,AsyncStorage} from 'react-native'
+import { Text, View, ImageBackground,Image,TextInput,Button,TouchableHighlight,AsyncStorage,TouchableOpacity} from 'react-native'
 import {styles} from './LoginScreenStyle'
 import {CustomButton} from '../components/CustomButton'
 import {InputBox} from '../components/InputBox'
@@ -78,7 +78,9 @@ export default class LoginScreen extends Component {
                 </View>
                 </View>
                 <View>
-                <CustomButton title = "ĐĂNG NHẬP" buttoncolor = "#84a59d" textcolor = 'white' buttonclick = {this._retrieveData}/>
+                <TouchableOpacity style={[styles.SubmitFormStyle,{backgroundColor:"#84a59d" ,alignItems:'center',paddingRight: 20}]} activeOpacity = { .5 } onPress={() => this.props.navigation.navigate('Home')}>
+            <Text style = {{color: 'white', textAlign:'center',width:'100%',fontFamily: 'quicksand-bold'}}>ĐĂNG NHẬP</Text>
+            </TouchableOpacity>
                 </View>
                 </View>
                 <View style = {{height:30}}><Text style = {[styles.heading, {fontFamily: 'quicksand-bold'}]}> Social Logins</Text></View>
