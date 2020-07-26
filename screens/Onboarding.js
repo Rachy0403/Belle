@@ -45,7 +45,7 @@ export default class Onboarding extends React.Component {
 					<Block flex space="around" style={{ zIndex: 2 }}>
 						<Block>
 							<Block>
-								<Text style={styles.font} color="#F28482" size={50}>Belle</Text>
+								<Text style={{fontFamily: 'quicksand-bold'}} color="#F28482" size={50}>Belle</Text>
 							</Block>
 							<Block>
 								<Text style={styles.font} size={16} color='#F6BD60'>
@@ -62,7 +62,7 @@ export default class Onboarding extends React.Component {
 						<Block center>
 							<Button
 								shadowless
-								style={styles.button, styles.font}
+								style={styles.button}
 								color={materialTheme.COLORS.BUTTON_COLOR}
 								onPress={() => navigation.navigate('Option')}>
 								KHÁM PHÁ NGAY
@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
 		bottom: theme.SIZES.BASE,
 	},
 	button: {
+		fontFamily: 'quicksand-bold',
 		width: width - theme.SIZES.BASE * 9,
 		height: theme.SIZES.BASE * 3,
 		borderRadius: 30,
@@ -92,6 +93,6 @@ const styles = StyleSheet.create({
 		shadowOpacity: 0,
 	},
 	font: {
-		fontFamily: 'quicksand-bold'
+		fontFamily: 'quicksand'
 	}
 });
