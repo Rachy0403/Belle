@@ -91,7 +91,7 @@ export default class LoginScreen extends Component {
 
                 <View style  = {{alignItems:'center'}}>
                 <Text style = {[styles.heading,{color:'grey',marginBottom:10}]}>Không có tài khoản?</Text>
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('RegisterScreen')}>
+                <TouchableHighlight >
                     <Text style = {[styles.heading,{fontWeight:'bold'}]}>ĐĂNG KÝ</Text>
                 </TouchableHighlight>
                 </View >
