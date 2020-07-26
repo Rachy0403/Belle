@@ -75,7 +75,7 @@ function SettingsStack(props) {
 	);
 }
 
-function ComponentsStack(props) {
+/* function ComponentsStack(props) {
 	return (
 		<Stack.Navigator mode="card" headerMode="screen">
 			<Stack.Screen
@@ -89,7 +89,7 @@ function ComponentsStack(props) {
 			/>
 		</Stack.Navigator>
 	);
-}
+} */
 
 function HomeStack(props) {
   return (
@@ -209,47 +209,6 @@ function AppStack(props) {
               family="font-awesome"
               color={focused ? "white" : materialTheme.COLORS.MUTED}
               style={{ marginRight: -3 }}
-            />
-          )
-        }}
-      />
-      <Drawer.Screen
-        name="Components"
-        component={ComponentsStack}
-        options={{
-          drawerIcon: ({ focused }) => (
-            <Icon
-              size={16}
-              name="md-switch"
-              family="ionicon"
-              color={focused ? "white" : materialTheme.COLORS.MUTED}
-              style={{ marginRight: 2, marginLeft: 2 }}
-            />
-          )
-        }}
-      />
-      <Drawer.Screen
-        name="Sign In"
-        component={ProScreen}
-        options={{
-          drawerIcon: ({ focused }) => (
-            <Icon
-              size={16}
-              name="ios-log-in"
-              family="ionicon"
-            />
-          )
-        }}
-      />
-      <Drawer.Screen
-        name="Sign Up"
-        component={ProScreen}
-        options={{
-          drawerIcon: ({ focused }) => (
-            <Icon
-              size={16}
-              name="md-person-add"
-              family="ionicon"
             />
           )
         }}
