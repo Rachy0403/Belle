@@ -27,7 +27,7 @@ export default class Profile extends React.Component {
                     <Block middle style={styles.pro}>
                       <Text size={16} color="white">Pro</Text>
                     </Block>
-                    <Text color="white" size={16} muted style={styles.seller}>Seller</Text>
+                    <Text color="white" size={16} muted style={styles.seller}>Newbie</Text>
                     <Text size={16} color={materialTheme.COLORS.WARNING}>
                       4.8 <Icon name="shape-star" family="GalioExtra" size={14} />
                     </Text>
@@ -35,7 +35,7 @@ export default class Profile extends React.Component {
                   <Block>
                     <Text color={theme.COLORS.MUTED} size={16}>
                       <Icon name="map-marker" family="font-awesome" color={theme.COLORS.MUTED} size={16} />
-                      {` `} Los Angeles, CA
+                      {` `} Hanoi, Vietnam
                       </Text>
                   </Block>
                 </Block>
@@ -48,16 +48,16 @@ export default class Profile extends React.Component {
           <ScrollView showsVerticalScrollIndicator={false}>
             <Block row space="between" style={{ padding: theme.SIZES.BASE, }}>
               <Block middle>
+                <Text bold size={12} style={{marginBottom: 8}}>5</Text>
+                <Text muted size={12}>Giáo dục</Text>
+              </Block>
+              <Block middle>
                 <Text bold size={12} style={{marginBottom: 8}}>36</Text>
-                <Text muted size={12}>Orders</Text>
+                <Text muted size={12}>Diễn đàn</Text>
               </Block>
               <Block middle>
                 <Text bold size={12} style={{marginBottom: 8}}>5</Text>
-                <Text muted size={12}>Bids & Offers</Text>
-              </Block>
-              <Block middle>
-                <Text bold size={12} style={{marginBottom: 8}}>2</Text>
-                <Text muted size={12}>Messages</Text>
+                <Text muted size={12}>Gợi ý</Text>
               </Block>
             </Block>
             <Block row space="between" style={{ paddingVertical: 16, alignItems: 'baseline' }}>

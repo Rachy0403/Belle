@@ -83,11 +83,6 @@ export default class LoginScreen extends Component {
 							</TouchableOpacity>
 						</View>
 					</View>
-					<View style={{ height: 30 }}><Text style={[styles.heading, { fontFamily: 'quicksand-bold' }]}> Social Logins</Text></View>
-					<View style={{ height: 50, flexDirection: 'row', justifyContent: 'center' }}>
-						<Image source={require('../components/images/LoginScreen/Facebook-button.png')} style={[styles.moviebutton, { marginRight: 30 }]}></Image>
-						<Image source={require('../components/images/LoginScreen/Facebook-button.png')} style={styles.moviebutton}></Image>
-					</View>
 
 					<View style={{ alignItems: 'center' }}>
 						<Text style={[styles.heading, { color: 'grey', marginBottom: 10 }]}>Không có tài khoản?</Text>
