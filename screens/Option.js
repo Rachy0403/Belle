@@ -53,7 +53,7 @@ export default class Option extends React.Component {
 							style={styles.button}
 							color={materialTheme.COLORS.BUTTON_COLOR}
 							onPress={() => navigation.navigate('Log In')}>
-							Đăng ký
+							Đăng nhập
 						</Button>
 					</Block>
 				</Block>

@@ -10,27 +10,29 @@ import materialTheme from '../constants/Theme';
 
 export default class Onboarding extends React.Component {
 
-	constructor () {
-        super()
-        this.state = {
-          loading: true
-        }
-	 }
-	 
-     async componentWillMount() {
-        await Font.loadAsync({
-            'quicksand': require('./../assets/fonts/Quicksand-Regular.ttf'),
-            'quicksand-bold': require('./../assets/fonts/Quicksand-Bold.ttf')
-        })
-        this.setState({ loading: false })
-    }
+	constructor() {
+		super()
+		this.state = {
+			loading: true
+		}
+	}
+
+	async componentWillMount() {
+		await Font.loadAsync({
+			'quicksand': require('./../assets/fonts/Quicksand-Regular.ttf'),
+			'quicksand-bold': require('./../assets/fonts/Quicksand-Bold.ttf'),
+			'quicksand-medium': require('./../assets/fonts/Quicksand-Medium.ttf'),
+			'sacramento': require('./../assets/fonts/Sacramento-Regular.ttf')
+		})
+		this.setState({ loading: false })
+	}
 
 	render() {
 		const { navigation } = this.props;
 
 		if (this.state.loading) {
-            return <ActivityIndicator />;
-          }
+			return <ActivityIndicator />;
+		}
 
 		return (
 			<Block flex style={styles.container}>
@@ -44,15 +46,13 @@ export default class Onboarding extends React.Component {
 				<Block flex space="between" style={styles.padded}>
 					<Block flex space="around" style={{ zIndex: 2 }}>
 						<Block>
-							<Block>
-								<Text style={{fontFamily: 'quicksand-bold'}} color="#F28482" size={50}>Belle</Text>
-							</Block>
+							<Text style={{ fontFamily: 'sacramento' }} color="#F28482" size={60}>Belle</Text>
 							<Block>
 								<Text style={styles.font} size={16} color='#F6BD60'>
-									of girls
+									Of girls,
 								</Text>
 								<Text style={styles.font} size={16} color='#F6BD60'>
-									for girls
+									for girls,
 								</Text>
 								<Text style={styles.font} size={16} color='#F6BD60'>
 									by girls
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
 		backgroundColor: theme.COLORS.BLACK,
 	},
 	padded: {
-		paddingHorizontal: theme.SIZES.BASE * 2,
+		paddingHorizontal: theme.SIZES.BASE * 0.5,
 		position: 'relative',
 		bottom: theme.SIZES.BASE,
 	},
@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
 		shadowOpacity: 0,
 	},
 	font: {
-		fontFamily: 'quicksand'
+		paddingHorizontal: theme.SIZES.BASE,
+		fontFamily: 'quicksand-medium'
 	}
 });

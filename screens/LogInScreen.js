@@ -78,7 +78,7 @@ export default class LoginScreen extends Component {
 							</View>
 						</View>
 						<View>
-							<TouchableOpacity style={[styles.SubmitFormStyle, { backgroundColor: "#84a59d", alignItems: 'center', paddingRight: 20 }]} activeOpacity={.5} onPress={() => this.props.navigation.navigate('Home')}>
+							<TouchableOpacity style={[styles.SubmitFormStyle, { backgroundColor: "#84a59d", alignItems: 'center', paddingRight: 20 }]} activeOpacity={.5} onPress={() => this.props.navigation.navigate('App')}>
 								<Text style={{ color: 'white', textAlign: 'center', width: '100%', fontFamily: 'quicksand-bold' }}>ĐĂNG NHẬP</Text>
 							</TouchableOpacity>
 						</View>
