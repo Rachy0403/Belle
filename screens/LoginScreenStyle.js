@@ -8,7 +8,21 @@ export const styles = StyleSheet.create({
     defaultStyle: {
         fontFamily: 'quicksand'
     },
-
+    SubmitFormStyle: {
+        width: 285,
+        height: 44,
+        borderRadius: 9,
+        shadowColor: "#84a59d",
+        shadowOffset: {
+          width: 0,
+          height: 5
+        },
+        shadowRadius: 5,
+        shadowOpacity: 1,
+        justifyContent:'center',
+        paddingLeft:20,
+        marginTop: 30,
+        },
 
     logobg:{
         width:100,
@@ -39,7 +53,7 @@ export const styles = StyleSheet.create({
         fontStyle: "normal",
         textAlign: "left",
         color: "#5a5a5a"   ,
-        fontFamily: 'quicksand'
+        fontFamily: 'quicksand-bold'
     },
     inputbox : {
         padding: 10,

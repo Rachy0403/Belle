@@ -25,11 +25,11 @@ const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const profile = {
-	avatar: Images.Profile,
-	name: "Rachel Brown",
-	type: "Seller",
-	plan: "Pro",
-	rating: 4.8
+  avatar: Images.Profile,
+  name: "Thu Nguyen",
+  type: "Newbie",
+  plan: "Pro",
+  rating: 4.8
 };
 
 function ProfileStack(props) {
@@ -92,35 +92,35 @@ function ComponentsStack(props) {
 }
 
 function HomeStack(props) {
-	return (
-		<Stack.Navigator mode="card" headerMode="screen">
-			<Stack.Screen
-				name="Home"
-				component={HomeScreen}
-				options={{
-					header: ({ navigation, scene }) => (
-						<Header
-							search
-							tabs
-							title="Home"
-							navigation={navigation}
-							scene={scene}
-						/>
-					)
-				}}
-			/>
-			<Stack.Screen
-				name="Pro"
-				component={ProScreen}
-				options={{
-					header: ({ navigation, scene }) => (
-						<Header back white transparent title="" navigation={navigation} scene={scene} />
-					),
-					headerTransparent: true
-				}}
-			/>
-		</Stack.Navigator>
-	);
+  return (
+    <Stack.Navigator mode="card" headerMode="screen">
+      <Stack.Screen 
+        name="Home"
+        component={HomeScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header 
+              title="Belle"
+              navigation={navigation}
+              scene={scene}
+              transparent	
+
+            />
+          )
+        }}
+      />
+      <Stack.Screen 
+        name="Pro"
+        component={ProScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header back white transparent title="" navigation={navigation} scene={scene} />
+          ),
+          headerTransparent: true
+        }}
+      />
+    </Stack.Navigator>
+  );
 }
 
 function AppStack(props) {
@@ -170,94 +170,106 @@ function AppStack(props) {
 				}}
 			/>
 
-			<Drawer.Screen
-				name="New Collection"
-				component={ProScreen}
-				options={{
-					drawerIcon: ({ focused }) => (
-						<Icon
-							size={16}
-							name="grid-on"
-							family="material"
-							color={focused ? "white" : materialTheme.COLORS.MUTED}
-						/>
-					)
-				}}
-			/>
-			<Drawer.Screen
-				name="Profile"
-				component={ProfileStack}
-				options={{
-					drawerIcon: ({ focused }) => (
-						<Icon
-							size={16}
-							name="circle-10"
-							family="GalioExtra"
-							color={focused ? "white" : materialTheme.COLORS.MUTED}
-						/>
-					)
-				}}
-			/>
-			<Drawer.Screen
-				name="Settings"
-				component={SettingsStack}
-				options={{
-					drawerIcon: ({ focused }) => (
-						<Icon
-							size={16}
-							name="gears"
-							family="font-awesome"
-							color={focused ? "white" : materialTheme.COLORS.MUTED}
-							style={{ marginRight: -3 }}
-						/>
-					)
-				}}
-			/>
-			<Drawer.Screen
-				name="Components"
-				component={ComponentsStack}
-				options={{
-					drawerIcon: ({ focused }) => (
-						<Icon
-							size={16}
-							name="md-switch"
-							family="ionicon"
-							color={focused ? "white" : materialTheme.COLORS.MUTED}
-							style={{ marginRight: 2, marginLeft: 2 }}
-						/>
-					)
-				}}
-			/>
-			<Drawer.Screen
-				name="Sign In"
-				component={ProScreen}
-				options={{
-					drawerIcon: ({ focused }) => (
-						<Icon
-							size={16}
-							name="ios-log-in"
-							family="ionicon"
-							color={focused ? "white" : materialTheme.COLORS.MUTED}
-						/>
-					)
-				}}
-			/>
-			<Drawer.Screen
-				name="Sign Up"
-				component={ProScreen}
-				options={{
-					drawerIcon: ({ focused }) => (
-						<Icon
-							size={16}
-							name="md-person-add"
-							family="ionicon"
-							color={focused ? "white" : materialTheme.COLORS.MUTED}
-						/>
-					)
-				}}
-			/>
-		</Drawer.Navigator>
-	);
+      <Drawer.Screen
+        name="New Collection"
+        component={ProScreen}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="grid-on"
+              family="material"
+              color={focused ? "white" : materialTheme.COLORS.MUTED}
+            />
+          )
+        }}
+      />
+      <Drawer.Screen
+        name="Profile"
+        component={ProfileStack}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="circle-10"
+              family="GalioExtra"
+              color={focused ? "white" : materialTheme.COLORS.MUTED}
+            />
+          )
+        }}
+      />
+      <Drawer.Screen
+        name="Settings"
+        component={SettingsStack}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="gears"
+              family="font-awesome"
+              color={focused ? "white" : materialTheme.COLORS.MUTED}
+              style={{ marginRight: -3 }}
+            />
+          )
+        }}
+      />
+      <Drawer.Screen
+        name="Components"
+        component={ComponentsStack}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="md-switch"
+              family="ionicon"
+              color={focused ? "white" : materialTheme.COLORS.MUTED}
+              style={{ marginRight: 2, marginLeft: 2 }}
+            />
+          )
+        }}
+      />
+      <Drawer.Screen
+        name="Sign In"
+        component={ProScreen}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="ios-log-in"
+              family="ionicon"
+            />
+          )
+        }}
+      />
+      <Drawer.Screen
+        name="Sign Up"
+        component={ProScreen}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="md-person-add"
+              family="ionicon"
+            />
+          )
+        }}
+      />
+      <Drawer.Screen
+        name="Log In"
+        component={LogInScreen}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="md-person-add"
+              family="ionicon"
+              color={focused ? "white" : materialTheme.COLORS.MUTED}
+            />
+          )
+        }}
+      />
+    </Drawer.Navigator>
+  );
 }
 
 export default function OnboardingStack(props) {

@@ -188,8 +188,8 @@ export default class Components extends React.Component {
               tabs
               search
               title="Title"
-              tabTitleLeft="Option 1"
-              tabTitleRight="Option 2"
+              tabTitleLeft="Hello"
+              tabTitleRight="Thu"
               navigation={this.props.navigation} />
           </Block>
         </Block>
