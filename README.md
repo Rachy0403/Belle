@@ -8,8 +8,7 @@ An app of girls, for girls, by girls
 
 | Home Screen | Diễn Đàn | Đăng nhập | Tư vấn phá thai |
 | --- | --- | --- | --- |
-| <img width="324" alt="Screen Shot 2020-07-26 at 10 38 34 AM" src="https://user-images.githubusercontent.com/40749903/88470878-31d86f80-cf2c-11ea-996c-08432b7ad375.png"> | <img width="321" alt="Screen Shot 2020-07-26 at 10 41 00 AM" src="https://user-images.githubusercontent.com/40749903/88470915-9bf11480-cf2c-11ea-8483-5c96e15f2e94.png"> | <img width="361" alt="Screen Shot 2020-07-26 at 12 47 50 AM" src="https://user-images.githubusercontent.com/40749903/88470930-c9d65900-cf2c-11ea-9ba4-d1ff31f36998.png">
- | <img width="229" alt="Screen Shot 2020-07-26 at 10 41 25 AM" src="https://user-images.githubusercontent.com/40749903/88470937-db1f6580-cf2c-11ea-905b-2a1fb0a8be33.png"> |
+| <img width="200" alt="Screen Shot 2020-07-26 at 10 38 34 AM" src="https://user-images.githubusercontent.com/40749903/88470878-31d86f80-cf2c-11ea-996c-08432b7ad375.png"> | <img width="200" alt="Screen Shot 2020-07-26 at 10 41 00 AM" src="https://user-images.githubusercontent.com/40749903/88470915-9bf11480-cf2c-11ea-8483-5c96e15f2e94.png"> | <img width="200" alt="Screen Shot 2020-07-26 at 12 47 50 AM" src="https://user-images.githubusercontent.com/40749903/88470930-c9d65900-cf2c-11ea-9ba4-d1ff31f36998.png">| <img width="200" alt="Screen Shot 2020-07-26 at 10 41 25 AM" src="https://user-images.githubusercontent.com/40749903/88470937-db1f6580-cf2c-11ea-905b-2a1fb0a8be33.png"> |
 
 
 ## Quick start
