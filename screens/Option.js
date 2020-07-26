@@ -7,7 +7,6 @@ import { ActivityIndicator } from "react-native";
 const { height, width } = Dimensions.get('screen');
 
 import materialTheme from '../constants/Theme';
-/* import Images from '../constants/Images'; */
 
 export default class Option extends React.Component {
 
@@ -39,7 +38,7 @@ export default class Option extends React.Component {
 					<ImageBackground source={require('../components/images/LoginScreen/yoga.png')} style={styles.logo}>
 					</ImageBackground>
 					<Block center style={styles.padded}>
-						<Text style={styles.font} color="black" size={25}>Bạn đang quan tâm đến vấn đề gì?</Text>
+						<Text style={styles.font} color="black" size={25}>Bạn muốn tiếp tục với tư cách gì?</Text>
 					</Block>
 					<Block flex style={styles.item}>
 						<Button
@@ -47,21 +46,14 @@ export default class Option extends React.Component {
 							style={styles.button}
 							color={materialTheme.COLORS.BUTTON_COLOR}
 							onPress={() => navigation.navigate('App')}>
-							Biện pháp tránh thai
+							Ẩn danh
 						</Button>
 						<Button
 							shadowless
 							style={styles.button}
 							color={materialTheme.COLORS.BUTTON_COLOR}
-							onPress={() => navigation.navigate('App')}>
-							Biện pháp phá thai
-						</Button>
-						<Button
-							shadowless
-							style={styles.button}
-							color={materialTheme.COLORS.BUTTON_COLOR}
-							onPress={() => navigation.navigate('App')}>
-							Các bệnh lây qua đường tình dục
+							onPress={() => navigation.navigate('Log In')}>
+							Đăng ký
 						</Button>
 					</Block>
 				</Block>
@@ -81,7 +73,7 @@ const styles = StyleSheet.create({
 		position: 'relative',
 	},
 	logo: {
- 		marginTop: theme.SIZES.BASE * 3,
+		marginTop: theme.SIZES.BASE * 3,
 		width: theme.SIZES.BASE * 12,
 		height: theme.SIZES.BASE * 15
 	},
