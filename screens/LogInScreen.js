@@ -9,49 +9,46 @@ import { ActivityIndicator } from "react-native";
 
 export default class LoginScreen extends Component {
 
-    constructor () {
-        super()
-        this.state = {
-          username: '',
-          password:'',
-          register: '',
-          loading: true,
+	constructor() {
+		super()
+		this.state = {
+			username: '',
+			password: '',
+			register: '',
+			loading: true,
 
-        }
-     }
-     async componentWillMount() {
-        await Font.loadAsync({
-            'quicksand': require('./../assets/fonts/Quicksand-Regular.ttf'),
-            'quicksand-bold': require('./../assets/fonts/Quicksand-Bold.ttf')
-        })
-        this.setState({ loading: false })
-    }
-     
+		}
+	}
+	async componentWillMount() {
+		await Font.loadAsync({
+			'quicksand': require('./../assets/fonts/Quicksand-Regular.ttf'),
+			'quicksand-bold': require('./../assets/fonts/Quicksand-Bold.ttf')
+		})
+		this.setState({ loading: false })
+	}
 
-     handleTextChange = (key,value) => {
-        this.setState({[key]:value})
-    }
-    _retrieveData = async () => {
-        try {
-            const value = await AsyncStorage.getItem(this.state.username);
-            if (value !== null) {
-                // Our data is fetched successfully
-                if (value === this.state.password){
-                    this.setState({register:"pass"})
-                    this.props.navigation.navigate('AppStack',{username:this.state.username})
-                }
-                else {
-                    this.setState({register:"Wrong password. Try again"})
-                }
-            }
-            else {
-                this.setState({register:"Can't find any account with this name. You need to create a new account"})
-            }
-        } catch (error) {   
-            this.setState({register:"Wrong password. Try again"})
 
-             }
-    }
+	handleTextChange = (key, value) => {
+		this.setState({ [key]: value })
+	}
+	_retrieveData = async () => {
+		try {
+			const value = await AsyncStorage.getItem(this.state.username);
+			if (value !== null) {
+				// Our data is fetched successfully
+				if (value === this.state.password) {
+					this.setState({ register: "pass" })
+					this.props.navigation.navigate('AppStack', { username: this.state.username })
+				}
+				else {
+					this.setState({ register: "Wrong password. Try again" })
+				}
+			}
+			else {
+				this.setState({ register: "Can't find any account with this name. You need to create a new account" })
+			}
+		} catch (error) {
+			this.setState({ register: "Wrong password. Try again" })
 
     render() {
         if (this.state.loading) {
@@ -89,16 +86,6 @@ export default class LoginScreen extends Component {
                 <Image source = {require('../components/images/LoginScreen/Facebook-button.png')} style = {styles.moviebutton}></Image>
                 </View>
 
-                <View style  = {{alignItems:'center'}}>
-                <Text style = {[styles.heading,{color:'grey',marginBottom:10}]}>Không có tài khoản?</Text>
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('RegisterScreen')}>
-                    <Text style = {[styles.heading,{fontWeight:'bold'}]}>ĐĂNG KÝ</Text>
-                </TouchableHighlight>
-                </View >
-
-                </ImageBackground>
-                
-            </View>
-        )
-    }
+		)
+	}
 }
